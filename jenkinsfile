@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Deploy') {
+            steps {
+                sh 'ssh abhinav@192.168.2.20 \'rm -rf /home/abhinav/home/abhinav/umang/*\''
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'php_server', transfer>
+           }
+        }
+    }
+}
